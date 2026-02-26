@@ -49,7 +49,7 @@ const products = [
 ];
 
 app.get("/", (req, res) => {
-    res.send("server RUN ho rha hai bhai! (0_0)");
+    res.send("server RUN");
 });
 // app.use(express());
 // app.use(cors);
@@ -133,11 +133,6 @@ app.put("/products/:id/stock", (req, res) => {
     }
 
     products[index].stock = Number(req.body.stock);
-        // id: userId,
-        // name: req.body.name,
-        // category: req.body.category,
-        // price: Number(req.body.price),
-        // rating: Number(req.body.rating)
 
     res.status(200).json({
         message: "User replaced",
@@ -154,11 +149,7 @@ app.put("/products/:id/price", (req, res) => {
     }
 
     products[index].price = Number(req.body.price);
-        // id: userId,
-        // name: req.body.name,
-        // category: req.body.category,
-        // price: Number(req.body.price),
-        // rating: Number(req.body.rating)
+        
 
     res.status(200).json({
         message: "User replaced",
